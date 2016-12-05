@@ -1,0 +1,23 @@
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: .*
+  script: word_counting_server.app
+
+libraries:
+- name: beautifulsoup4
+  version: "4.4.1"
+- name: tornado
+  version: "4.4.2"
+- name: pycrypto
+  version: "2.6.1"
+- name: MySQL-python
+  version: "1.2.5"
+- name: requests
+  version: "2.7"
+- name: lxml
+  version: "3.4.4"
+- name: sqlalchemy
+  version: "1.1.4"
