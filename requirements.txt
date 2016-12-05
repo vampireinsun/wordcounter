@@ -1,0 +1,7 @@
+beautifulsoup4
+tornado
+pycrypto
+MySQL-python
+requests
+lxml
+sqlalchemy

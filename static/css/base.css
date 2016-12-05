@@ -1,0 +1,395 @@
+/* CCS RESET */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: calibri, "trebuchet ms", sans-serif ;
+	vertical-align: baseline;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+.group {
+	text-align: left;
+	color: #6678B1;
+	font-weight: bold;
+	background-color: #D2D2D2;
+	padding: 5px;
+	border-bottom: 2px solid #6678B1;
+}
+body {
+	line-height: 1;
+	color: black;
+	background: white;
+}
+ol, ul {
+	list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+/* LIGADA UI */
+/* ligada version number displayed next to the ligada logo */
+#mdVersion {
+	float: left;
+	color: #333333;
+	padding-top: 25px;
+
+	font-size: 2rem;
+	font-family: "Roboto", Corbel, Avenir, "Lucida Grande", "Lucida Sans", sans-serif;
+	display: block;
+	font-weight: 700;
+}
+/* h2 is used for all of the smaller blue headings on the page */
+h2 {
+	color: #3366CC;
+	font-size: 2em;
+}
+h3 {
+	color: #3366CC;
+	font-size: 1em;
+}
+/* all text should be in Ps so it get the right colour */
+p {
+	color: #333333;
+}
+/* contains the page title and the logo images */
+#topBar {
+	min-width: 800px;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color: #F5F5F5;
+	border-bottom: 1px solid #D2D2D2;
+	height: 85px;
+}
+/* contains links to UI sections */
+#linkBar2 {
+	min-width: 800px;
+	width: 100%;
+	border-bottom: 1px solid #D2D2D2;
+	background-color: #F5F5F5;
+	color: #CCCCCC;
+	height: 30px;
+}
+#linkBar {
+	min-width: 800px;
+	position: fixed;
+	width: 100%;
+	top: 86px;
+	left: 0;
+	border-bottom: 1px solid #D2D2D2;
+	background-color: #F5F5F5;
+	color: #CCCCCC;
+	height: 30px;
+}
+.automatable td {
+	color: #3CA65D;
+}
+/* the ligada logo displayed to the top left of the page */
+#dukLogo {
+	float: left;
+	padding-left: 20px;
+	padding-top: 10px;
+}
+/* the DTVL logo displayed to the top right of the page */
+#dtgLogo {
+	float: right;
+	padding-top: 32px;
+	padding-right: 20px;
+}
+/* links for the link bar */
+#linkBar a, #linkBar2 a {
+	text-decoration: none;
+	color: #333333;
+	padding: 7px 10px 7px;
+	background-color: white;
+	vertical-align: middle;
+}
+#linkBar a:visited, #linkBar2 a:visited {
+	text-decoration: none;
+	color: #333333;
+}
+#linkBar a:active, #linkBar2 a:active {
+	text-decoration: none;
+	color: #333333;
+}
+#linkBar a:hover, #linkBar2 a:hover {
+	text-decoration: none;
+	background-color: #F5F5F5;
+}
+.runImg {
+	width: 32px;
+	background-repeat:no-repeat;
+	background-position:center;
+}
+.leftLink {
+	float: left;
+	border-right: 1px solid #D2D2D2;
+}
+.rightLink {
+	float: right;
+	border-left: 1px solid #D2D2D2;
+}
+#leftSection {
+	margin-top: 115px;
+	overflow: auto;
+}
+#rightSection {
+	margin-top: 115px;
+}
+#testBox {
+	display: none;
+}
+.menu {
+	display: none;
+	overflow: auto;
+	padding: 15px;
+	top: 30px;
+	position: absolute;
+	border-bottom-right-radius: 15px;
+	background-color: #F5F5F5;
+	border: 1px solid #D2D2D2;
+}
+#menu {
+	border-bottom-left-radius: 15px;
+}
+.sorting_disabled th {
+	padding: 3px;
+}
+#menu a {
+	text-decoration: none;
+	color: #333333;
+	padding: 10px 5px;
+	background-color: transparent;
+	clear: both;
+	font-size: 1em;
+	display: block;
+	margin: 0px;
+}
+#menu a:hover {
+	background-color: white;
+	border-radius: 5px;
+	color: #3366CC;
+}
+.menuHeader {
+	font-size: 1.5em;
+	color: #3366CC;
+}
+/* styles for test table */
+table {
+	width: 100%;
+}
+td, th {
+	padding: 12px 10px;
+	margin: 5px;
+	font-size: 14px;
+	text-align: center;
+}
+th {
+	border-bottom: 2px solid #6678B1;
+	color: #003399;
+	font-weight: bold;
+}
+td {
+	color: #666699;
+	border-bottom: 1px solid #CCCCCC;
+}
+/* styles for right column */
+.secondHeader {
+	color: #333333;
+	font-size: 1.5em;
+	margin: 5px 20px;
+}
+.secondHeaderText {
+	color: #333333;
+	font-size: 1em;
+	margin: 5px 20px;
+}
+/* interactive prompt */
+#interactiveDialog {
+	display: none;
+	position: absolute;
+	z-index: 1;
+	top: 10%;
+	left: 200px;
+	padding: 20px;
+	width: 400px;
+	margin: auto;
+	background-color: #F1F1F1;
+	color: #333333;
+	overflow: auto;
+	border: 10px solid rgba(0, 0, 0, .5);
+	border-radius: 5px;
+}
+/* analyse prompt */
+#analyseDialog {
+	display: none;
+	position: absolute;
+	z-index: 1;
+	top: 10%;
+	left: 200px;
+	padding: 20px;
+	width: 400px;
+	margin: auto;
+	background-color: #F1F1F1;
+	color: #333333;
+	overflow: auto;
+	border: 10px solid rgba(0, 0, 0, .5);
+	border-radius: 5px;
+}
+/* loading gif */
+.loader {
+	text-align: center;
+	margin-top: 200px;
+}
+.indexLoader {
+	text-align: center;
+	margin-top: 200px;
+	display: none;
+}
+.row:hover {
+	cursor: pointer;
+	background-color: #F1F1F1;
+	color: #003399;
+}
+/* test step rows */
+/* a row of output in in the right column */
+.testStepA {
+	clear: both;
+	background-color: #F1F1F1;
+	padding: 20px;
+	-moz-border-radius: 1px;
+	border-radius: 1px;
+}
+#menuImg {
+	width: 8px;
+	height: 8px;
+	vertical-align: middle;
+	position: absolute;
+	top: 12px;
+}
+/* img is used to display the tick/cross for each test step */
+.testStepA img {
+	padding-top: 10px;
+	float: right;
+}
+/* as above but with a different colour background. testStepA and B are alternated to get a nice zebra effect */
+.testStepB {
+	clear: both;
+	background-color: #FFFFFF;
+	padding: 20px;
+	-moz-border-radius: 1px;
+	border-radius: 1px;
+}
+/* as with testStepA img */
+.testStepB img {
+	padding-top: 10px;
+	float: right;
+}
+/* some styles for the info on the test page */
+strong {
+	font-weight: bold;
+	margin: 3px;
+}
+.testText {
+	margin-top: 5px;
+}
+.clickable {
+	cursor: pointer;
+	margin-bottom: 5px;
+}
+/* test index stuff */
+.detailDiv {
+	display: none;
+}
+#nothingSelected {
+	text-align: center;
+}
+#nothingSelected h1 {
+	font-weight: bold;
+	font-size: 1.7em;
+	margin-bottom: 20px;
+}
+#nothingSelected p {
+	font-size: 1.2em;
+}
+
+body.popup {
+	min-width: 0px;
+}
+
+#streamErrors{
+	padding: 1em;
+}
+
+#footer{
+	text-align: center;
+}
+
+#runTests #footer {
+	bottom: 0;
+	left: 0;
+	padding: 1em;
+	position: fixed;
+	text-align: center;
+	width: 100%;
+	background: white;
+	border-top: 1px solid #D2D2D2;
+}
+
+#runTests #rightSection {
+	margin-bottom: 50px;
+}
+
+#innerWrapLeft {
+	min-height: 95%;
+}
+
+
+ul.errorlist {
+ clear: both;
+ font-weight: bold;
+ color: red;
+ margin-top: .1em;
+}
+
+div.message_panel {
+	background: #C3D9FF;
+	margin: 10px auto 20px auto;
+	width: 300px;
+	padding: 25px;
+	text-align: center;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+div.message_panel li {
+	list-style: none;
+}
