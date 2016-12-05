@@ -7,12 +7,14 @@ Python packages:
 beautifulsoup4
 tornado
 pycrypto
-MySQL-python
 requests
 lxml
 sqlalchemy
 Use the following command to install them
 >pip install -r ./requirements.txt
+
+The package requireds MySQL-python, you need to install the following one. e.g. on linux platform, ubuntu
+>sudo apt-get install python-mysqldb
 
 
 The solution

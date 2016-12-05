@@ -36,6 +36,11 @@ class WedPageWordCounter(object):
     def __init__(self, word_filter):
         self.word_filter = word_filter
 
+    def _is_a_word(self, word):
+        filter_word = filter(lambda x: 97 <= ord(x) <= 122 or 65 <= ord(x) <= 90
+                                       or 48 <= ord(x) <= 57 or x in [45, 95, 39, 47], word)
+        return len(filter_word) == len(word)
+
     def _counting_words(self, content, top_n):
         word_counter = {}
         soup = BeautifulSoup(content, "lxml")
@@ -48,7 +53,7 @@ class WedPageWordCounter(object):
             words = word_line.split(" ")
             for word in words:
                 word = word.strip("()*-_ ^.!;:\n\t\"").lower()
-                if word and self.word_filter.is_wanted(word):
+                if word != "" and self.word_filter.is_wanted(word) and self._is_a_word(word):
                     if word not in word_counter:
                         word_counter[word] = 0
                     word_counter[word] += 1

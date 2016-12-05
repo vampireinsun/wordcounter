@@ -7,7 +7,7 @@ handlers:
   script: word_counting_server.app
 
 libraries:
-- name: beautifulsoup4
+- name: bs4
   version: "4.4.1"
 - name: tornado
   version: "4.4.2"
